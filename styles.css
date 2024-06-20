@@ -1,0 +1,129 @@
+:root {
+--bright-orange: hsl(31, 77%, 52%);
+--dark-cyan: hsl(184, 100%, 22%);
+--very-dark-cyan: hsl(179, 100%, 13%);
+--transparent-white: hsla(0, 0%, 100%, 0.75);
+--very-light-gray: hsl(0, 0%, 95%);
+--fs-p: 15px;
+--fs-h1: 40px;
+--lh-p: 25px;
+-fw-bold: 700;
+-fw-normal: 400;
+--ff-normal: 'Lexend Deca', sans-serif;
+--ff-bold: 'Big Shoulders Display', cursive;
+}
+
+body {
+    margin: 0;
+    background-color: var(--very-light-gray);
+    min-height: 100vh;
+}
+
+h1 {
+    font-family: var(--ff-bold);
+    font-weight: var(--fw-bold);
+    font-size: var(--fs-h1);
+    color: var(--transparent-white);
+    text-transform: uppercase;
+}
+
+p {
+    font-family: var(--ff-normal);
+    font-weight: var(--fw-normal);
+    font-size: var(--fs-primary);
+    color: var(--very-light-gray);
+    line-height: var(--lh-p);
+}
+
+button {
+   width: 146px;
+   height: 48px;
+   border-radius: 25px;
+   border: none;
+}
+
+button:hover {
+    cursor: pointer;
+    background: none;
+    border: 2px solid white;
+}
+
+main {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 40px;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr; 
+    max-width: 920px;
+    margin: auto;
+    height: 500px;
+}
+
+.grid div {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: space-evenly;
+    padding: 0 40px;
+    background-color: white;
+}
+
+.grid .sedan {
+    background-color: var(--bright-orange);
+    border-radius: 8px 0 0 8px;
+}
+
+.grid .sedan button {
+    color: var(--bright-orange);
+}
+.grid .sedan button:hover {
+    color: white;
+}
+
+.grid .suv {
+    background-color: var(--dark-cyan);
+}
+
+.grid .suv button {
+    color: var(--dark-cyan);
+}
+
+.grid .suv button:hover {
+    color: white;
+}
+
+.grid .luxury {
+    background-color: var(--very-dark-cyan);
+    border-radius: 0 8px 8px 0;
+}
+
+.grid .luxury button {
+    color: var(--very-dark-cyan);
+}
+
+.grid .luxury button:hover {
+    color: white;
+}
+
+
+
+@media screen and (max-width: 687px) {
+    main {
+        height: auto;
+        padding: 20px;
+    }
+    
+    .grid {
+        grid-template-columns: 1fr;
+        height: auto;
+    }
+    .grid div {
+        padding: 20px;
+        
+    }
+}
